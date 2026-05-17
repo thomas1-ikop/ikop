@@ -10,6 +10,7 @@ const catColors = {
   Racing:      { bg: '#dbeafe', border: '#60a5fa', text: '#1e3a8a' },
   Sports:      { bg: '#fce7f3', border: '#f472b6', text: '#831843' },
   Zombie:      { bg: '#f0fdf4', border: '#86efac', text: '#166534' },
+  Shooting:    { bg: '#fef3c7', border: '#fbbf24', text: '#92400e' },
 }
 
 export default function GamePage() {
@@ -61,6 +62,7 @@ export default function GamePage() {
             frameBorder="0"
             allowFullScreen
             scrolling="no"
+            allow="autoplay; fullscreen"
             style={{ display: 'block' }}
           />
         </div>

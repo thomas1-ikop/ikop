@@ -1,14 +1,202 @@
 export const games = [
-  { slug: 'moto-x3m', title: 'Moto X3M', category: 'Racing', featured: true, hot: true, thumbnail: 'https://img.gamedistribution.com/71887b326e604857b5ef8b1c9ec62aa0-512x512.jpeg', url: 'https://html5.gamedistribution.com/71887b326e604857b5ef8b1c9ec62aa0/', description: 'Race your motorbike through insane obstacle courses!' },
-  { slug: 'stickman-hook', title: 'Stickman Hook', category: 'Action', featured: true, hot: true, thumbnail: 'https://img.gamedistribution.com/6491ad5f26e44f149f9ece1377848d5b-512x512.jpeg', url: 'https://html5.gamedistribution.com/6491ad5f26e44f149f9ece1377848d5b/', description: 'Swing through levels as a stickman using a grappling hook!' },
-  { slug: 'fireboy-watergirl', title: 'Fireboy & Watergirl', category: 'Puzzle', featured: true, hot: false, thumbnail: 'https://img.gamedistribution.com/1fed1a9ba32a4762ad0b70b34e5f79e2-512x512.jpeg', url: 'https://html5.gamedistribution.com/1fed1a9ba32a4762ad0b70b34e5f79e2/', description: 'Work together to solve puzzles. Reach the exit in each level!' },
-  { slug: 'snake-io', title: 'Snake.io', category: 'Multiplayer', featured: false, hot: true, thumbnail: 'https://img.gamedistribution.com/ba7e99d7e1a840129ababf52e47b61d1-512x512.jpeg', url: 'https://html5.gamedistribution.com/ba7e99d7e1a840129ababf52e47b61d1/', description: 'Grow your snake by eating pellets. Defeat other players!' },
-  { slug: 'paper-io', title: 'Paper.io', category: 'Multiplayer', featured: false, hot: false, thumbnail: 'https://img.gamedistribution.com/8d1c4f94f5dd4e8e9fb46d97a9a6a6b2-512x512.jpeg', url: 'https://html5.gamedistribution.com/8d1c4f94f5dd4e8e9fb46d97a9a6a6b2/', description: 'Claim territory by drawing lines. Conquer the map!' },
-  { slug: 'basketball-stars', title: 'Basketball Stars', category: 'Sports', featured: false, hot: true, thumbnail: 'https://img.gamedistribution.com/e5c88a9b75ab4d8e9a4b6c8d0e2f4a6b-512x512.jpeg', url: 'https://html5.gamedistribution.com/e5c88a9b75ab4d8e9a4b6c8d0e2f4a6b/', description: 'Play basketball against the best players in the world!' },
-  { slug: 'subway-surfers', title: 'Subway Surfers', category: 'Action', featured: false, hot: true, thumbnail: 'https://img.gamedistribution.com/bbe4b65c15ca4b8e91ccc7c76e72f634-512x512.jpeg', url: 'https://html5.gamedistribution.com/bbe4b65c15ca4b8e91ccc7c76e72f634/', description: 'Run, jump and surf through the subway. Dodge trains and collect coins!' },
-  { slug: 'slope', title: 'Slope', category: 'Action', featured: false, hot: true, thumbnail: 'https://img.gamedistribution.com/9f5ada72e7a942879b609d7872fe725a-512x512.jpeg', url: 'https://html5.gamedistribution.com/9f5ada72e7a942879b609d7872fe725a/', description: 'Control a ball rolling down a steep slope. Avoid obstacles!' },
-  { slug: 'zombie-tsunami', title: 'Zombie Tsunami', category: 'Zombie', featured: false, hot: true, thumbnail: 'https://img.gamedistribution.com/b9c2d5e8f1a4b7c0d3e6f9a2b5c8d1e4-512x512.jpeg', url: 'https://html5.gamedistribution.com/b9c2d5e8f1a4b7c0d3e6f9a2b5c8d1e4/', description: 'Lead a zombie horde and eat humans to grow your army!' },
-  { slug: 'penalty-shootout', title: 'Penalty Shootout', category: 'Sports', featured: false, hot: false, thumbnail: 'https://img.gamedistribution.com/c0d3e6f9a2b5c8d1e4f7a0b3c6d9e2f5-512x512.jpeg', url: 'https://html5.gamedistribution.com/c0d3e6f9a2b5c8d1e4f7a0b3c6d9e2f5/', description: 'Score penalties and become the champion!' },
-  { slug: '2048', title: '2048', category: 'Puzzle', featured: false, hot: false, thumbnail: 'https://img.gamedistribution.com/d1e4f7a0b3c6d9e2f5a8b1c4d7e0f3a6-512x512.jpeg', url: 'https://html5.gamedistribution.com/d1e4f7a0b3c6d9e2f5a8b1c4d7e0f3a6/', description: 'Merge tiles to reach 2048. Simple but addictive!' },
-  { slug: 'car-rush', title: 'Car Rush', category: 'Racing', featured: false, hot: false, thumbnail: 'https://img.gamedistribution.com/a8b3d6c9e2f1a4b7c0d3e6f9a2b5c8d1-512x512.jpeg', url: 'https://html5.gamedistribution.com/a8b3d6c9e2f1a4b7c0d3e6f9a2b5c8d1/', description: 'Race through traffic at high speed. Avoid crashing!' },
+  {
+    slug: 'moto-x3m',
+    title: 'Moto X3M',
+    category: 'Racing',
+    featured: true,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/5b0abd4c0faa4f5eb190a9a16d5a1b4c-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/5b0abd4c0faa4f5eb190a9a16d5a1b4c/?gd_sdk_referrer_url=https://ikop.vercel.app/games/moto-x3m',
+    description: 'Race your motorbike through insane obstacle courses. Perform stunts and beat the clock!'
+  },
+  {
+    slug: 'fireboy-watergirl-1',
+    title: 'Fireboy & Watergirl 1',
+    category: 'Puzzle',
+    featured: true,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/a55c9cc9c21e4fc683c8c6857f3d0c75-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/a55c9cc9c21e4fc683c8c6857f3d0c75/?gd_sdk_referrer_url=https://ikop.vercel.app/games/fireboy-watergirl-1',
+    description: 'Work together to solve puzzles in the Forest Temple. Reach the exit!'
+  },
+  {
+    slug: 'fireboy-watergirl-2',
+    title: 'Fireboy & Watergirl 2',
+    category: 'Puzzle',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/383ad09b92c7446b9113cccc29630517-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/383ad09b92c7446b9113cccc29630517/?gd_sdk_referrer_url=https://ikop.vercel.app/games/fireboy-watergirl-2',
+    description: 'Fireboy and Watergirl return in the Light Temple. More puzzles, more fun!'
+  },
+  {
+    slug: 'fireboy-watergirl-3',
+    title: 'Fireboy & Watergirl 3',
+    category: 'Puzzle',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/f3a6e1ac0a77412289cbac47658b2b68-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/f3a6e1ac0a77412289cbac47658b2b68/?gd_sdk_referrer_url=https://ikop.vercel.app/games/fireboy-watergirl-3',
+    description: 'Fireboy and Watergirl face the Ice Temple. Their coldest adventure yet!'
+  },
+  {
+    slug: 'paper-io',
+    title: 'Paper War.io',
+    category: 'Multiplayer',
+    featured: true,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/cfa73398f23a40feaed85292ab9ae51d-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/cfa73398f23a40feaed85292ab9ae51d/?gd_sdk_referrer_url=https://ikop.vercel.app/games/paper-io',
+    description: 'Claim territory by drawing lines. Defeat other players and conquer the map!'
+  },
+  {
+    slug: 'cubes-2048',
+    title: 'Cubes 2048.io',
+    category: 'Puzzle',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/5b5b258f7ed64796afd5f7e3653f18e1-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/5b5b258f7ed64796afd5f7e3653f18e1/?gd_sdk_referrer_url=https://ikop.vercel.app/games/cubes-2048',
+    description: 'Merge cubes to reach 2048 while competing against other players!'
+  },
+  {
+    slug: 'soccer-world-cup-caps',
+    title: 'Soccer World Cup Caps',
+    category: 'Sports',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/040ff13a2a9f44b98009750960a523ae-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/040ff13a2a9f44b98009750960a523ae/?gd_sdk_referrer_url=https://ikop.vercel.app/games/soccer-world-cup-caps',
+    description: 'Flick your cap and score goals in this super fun soccer caps game!'
+  },
+  {
+    slug: 'football-duel',
+    title: 'Football Duel',
+    category: 'Sports',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/4a9c7ad53f7c48678b3b848390a62daa-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/4a9c7ad53f7c48678b3b848390a62daa/?gd_sdk_referrer_url=https://ikop.vercel.app/games/football-duel',
+    description: 'Challenge a friend or CPU in this exciting 1v1 football duel!'
+  },
+  {
+    slug: 'artillery-vs-tanks',
+    title: 'Artillery vs Tanks',
+    category: 'Shooting',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/8c85fb2b116f4299927e33071c852847-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/8c85fb2b116f4299927e33071c852847/?gd_sdk_referrer_url=https://ikop.vercel.app/games/artillery-vs-tanks',
+    description: 'Destroy enemy tanks with your artillery. Aim carefully and fire!'
+  },
+  {
+    slug: 'office-spider-solitaire',
+    title: 'Office Spider Solitaire',
+    category: 'Puzzle',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/09fd115d31734cb0bbab0e58fa6e4a1b-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/09fd115d31734cb0bbab0e58fa6e4a1b/?gd_sdk_referrer_url=https://ikop.vercel.app/games/office-spider-solitaire',
+    description: 'Classic Spider Solitaire with an office twist. Relax and play cards!'
+  },
+  {
+    slug: 'arrow-count-master',
+    title: 'Arrow Count Master',
+    category: 'Action',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/77183764be80432a90acd34174f4dade-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/77183764be80432a90acd34174f4dade/?gd_sdk_referrer_url=https://ikop.vercel.app/games/arrow-count-master',
+    description: 'Collect arrows and grow your army. Defeat enemies with your massive arrow count!'
+  },
+  {
+    slug: 'bus-escape',
+    title: 'Bus Escape: Clear Jam',
+    category: 'Puzzle',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/9fc92d0c20434f779cfb934aa7e5fa33-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/9fc92d0c20434f779cfb934aa7e5fa33/?gd_sdk_referrer_url=https://ikop.vercel.app/games/bus-escape',
+    description: 'Solve the traffic jam puzzle. Move buses out of the way to clear the path!'
+  },
+  {
+    slug: 'hotgear',
+    title: 'HOTGEAR',
+    category: 'Racing',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/95c32bbf9a834a17a6ddac3ef76d2b2e-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/95c32bbf9a834a17a6ddac3ef76d2b2e/?gd_sdk_referrer_url=https://ikop.vercel.app/games/hotgear',
+    description: 'Customize your car and race through the streets. Drift, boost and chase!'
+  },
+  {
+    slug: 'basket-random',
+    title: 'Basket Random',
+    category: 'Sports',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/bf1268dccb5d43e7970bb3edaa54afc8-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/bf1268dccb5d43e7970bb3edaa54afc8/?gd_sdk_referrer_url=https://ikop.vercel.app/games/basket-random',
+    description: 'The most random basketball game ever! Play solo or vs a friend. First to 5 wins!'
+  },
+  {
+    slug: 'loop-ghost',
+    title: 'Loop Ghost',
+    category: 'Puzzle',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/3b187941ce7941e8bf379e7ec3a53747-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/3b187941ce7941e8bf379e7ec3a53747/?gd_sdk_referrer_url=https://ikop.vercel.app/games/loop-ghost',
+    description: 'Time loop puzzle where ghosts of your past cycles repeat your moves. Escape together!'
+  },
+  {
+    slug: 'football-legends-2026',
+    title: 'Football Legends 2026',
+    category: 'Sports',
+    featured: true,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/13eabea86f7c4cd993a156258420e9ec-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/13eabea86f7c4cd993a156258420e9ec/?gd_sdk_referrer_url=https://ikop.vercel.app/games/football-legends-2026',
+    description: 'Play as Messi, Ronaldo or Mbappe in fast-paced 1v1 and 2v2 soccer battles!'
+  },
+  {
+    slug: 'fierce-shot',
+    title: 'Fierce Shot',
+    category: 'Sports',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/837eb6bd30a14d818e8fb33e80f8df7d-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/837eb6bd30a14d818e8fb33e80f8df7d/?gd_sdk_referrer_url=https://ikop.vercel.app/games/fierce-shot',
+    description: 'Draw curve lines to kick the ball and score. Become the best in the world!'
+  },
+  {
+    slug: 'world-cup-2026',
+    title: 'World Cup 2026',
+    category: 'Sports',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/ad37a85f16e246fabdc818f375a5eb45-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/ad37a85f16e246fabdc818f375a5eb45/?gd_sdk_referrer_url=https://ikop.vercel.app/games/world-cup-2026',
+    description: 'Choose your national team and battle to win the World Cup 2026!'
+  },
+  {
+    slug: 'stick-kill-3d',
+    title: 'Stick Kill 3D',
+    category: 'Shooting',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/724f9f245a0e47308239bf37795141e6-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/724f9f245a0e47308239bf37795141e6/?gd_sdk_referrer_url=https://ikop.vercel.app/games/stick-kill-3d',
+    description: 'Aim carefully and eliminate enemies with your pistol. Precision is everything!'
+  },
+  {
+    slug: 'stickman-zombie-hero',
+    title: 'Stickman Zombie vs Hero',
+    category: 'Zombie',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/e28bcc262b6245dc806dba3a43d057ce-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/e28bcc262b6245dc806dba3a43d057ce/?gd_sdk_referrer_url=https://ikop.vercel.app/games/stickman-zombie-hero',
+    description: 'Play as stickman hero or zombie boss. Kill zombies or infect stickmen to win!'
+  },
 ]
