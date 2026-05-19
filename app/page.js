@@ -24,7 +24,12 @@ const catBoxes = [
 ]
 
 export default function Home() {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return new URLSearchParams(window.location.search).get('search') || ''
+    }
+    return ''
+  })
   const [searchOpen, setSearchOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState('All')
   const [favorites, setFavorites] = useState(() => {
@@ -79,6 +84,8 @@ export default function Home() {
           style={{ background: '#fef3c7', border: '2px solid #f59e0b', borderRadius: '99px', padding: '7px 18px', fontSize: '14px', fontFamily: 'Patrick Hand, sans-serif', color: '#92400e', fontWeight: 700, cursor: 'pointer' }}>
           ⭐ Favorites ({favorites.length})
         </button>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6738714121307819"
+     crossorigin="anonymous"></script>
       </header>
 
       {/* CATEGORY BAR */}
