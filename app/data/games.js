@@ -1,5 +1,15 @@
 export const games = [
   {
+    slug: 'ikop-survival',
+    title: 'Ikop Survival',
+    category: 'Action',
+    featured: true,
+    hot: true,
+    thumbnail: 'https://placehold.co/512x512/0d0d1a/a78bfa?text=🔮+Ikop+Survival',
+    url: '/games/ikop-survival',
+    description: 'Survive endless waves of enemies! Move with WASD, auto-shoot enemies, collect gems to level up and choose powerful upgrades. An Ikop original!'
+  },
+  {
     slug: 'moto-x3m',
     title: 'Moto X3M',
     category: 'Racing',
@@ -198,15 +208,5 @@ export const games = [
     thumbnail: 'https://img.gamedistribution.com/e28bcc262b6245dc806dba3a43d057ce-512x512.jpeg',
     url: 'https://html5.gamedistribution.com/e28bcc262b6245dc806dba3a43d057ce/?gd_sdk_referrer_url=https://ikop.vercel.app/games/stickman-zombie-hero',
     description: 'Play as stickman hero or zombie boss. Kill zombies or infect stickmen to win!'
-  },
-  {
-    slug: 'ikop-survival',
-    title: 'Ikop Survival',
-    category: 'Action',
-    featured: true,
-    hot: true,
-    thumbnail: 'https://placehold.co/512x512/7c3aed/ffffff?text=Ikop+Survival',
-    url: '/games/ikop-survival',
-    description: 'Survive endless waves of enemies! Move with WASD, auto-shoot enemies, collect gems to level up and choose powerful upgrades. An Ikop original!'
   },
 ]

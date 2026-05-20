@@ -2,6 +2,7 @@
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { games } from '../../data/games'
+import AdSlot from '../../components/AdSlot'
 
 const catColors = {
   Action:      { bg: '#fee2e2', border: '#f87171', text: '#991b1b' },
@@ -81,15 +82,8 @@ export default function GamePage() {
 
           {/* RIGHT AD */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <div style={{ background: 'white', border: '2px dashed #c4b5fd', borderRadius: '12px', padding: '12px', textAlign: 'center', minHeight: '250px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <p style={{ color: '#c4b5fd', fontSize: '11px', fontWeight: 700, margin: '0 0 6px', letterSpacing: '1px' }}>ADVERTISEMENT</p>
-              <p style={{ color: '#e0e8f0', fontSize: '11px', margin: 0 }}>160×250 Ad Slot</p>
-              <p style={{ color: '#c4b5fd', fontSize: '10px', margin: '8px 0 0' }}>Place AdSense code here</p>
-            </div>
-            <div style={{ background: 'white', border: '2px dashed #c4b5fd', borderRadius: '12px', padding: '12px', textAlign: 'center', minHeight: '200px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <p style={{ color: '#c4b5fd', fontSize: '11px', fontWeight: 700, margin: '0 0 6px', letterSpacing: '1px' }}>ADVERTISEMENT</p>
-              <p style={{ color: '#e0e8f0', fontSize: '11px', margin: 0 }}>160×200 Ad Slot</p>
-            </div>
+            <AdSlot />
+            <AdSlot style={{ minHeight: '200px' }} />
           </div>
         </div>
 

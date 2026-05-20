@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import Link from 'next/link'
 import { games } from '../../data/games'
+import AdSlot from '../../components/AdSlot'
 
 export default function IkopSurvival() {
   const canvasRef = useRef(null)
@@ -641,32 +642,10 @@ export default function IkopSurvival() {
         </div>
         <h1 style={{ fontFamily: 'Caveat, cursive', fontSize: '26px', fontWeight: 700, color: '#1f2937', marginBottom: '8px' }}>🔮 Ikop Survival</h1>
 
-        {/* THREE COLUMN LAYOUT */}
+        {/* GAME + ADS LAYOUT */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 160px', gap: '12px', alignItems: 'start', marginBottom: '14px' }}>
 
-          {/* LEFT — more games */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <p style={{ fontFamily: 'Caveat, cursive', fontSize: '16px', fontWeight: 700, color: '#5b21b6', margin: '0 0 4px' }}>More Games</p>
-            {sideGames.map(g => {
-              const c = catColors[g.category] || catColors.Action
-              return (
-                <Link key={g.slug} href={`/games/${g.slug}`} style={{ textDecoration: 'none' }}>
-                  <div style={{ borderRadius: '8px', overflow: 'hidden', border: `2px solid ${c.border}`, background: 'white', boxShadow: '0 2px 6px rgba(0,0,0,0.06)', transition: 'transform 0.15s' }}
-                    onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.04)'}
-                    onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>
-                    <div style={{ aspectRatio: '1', background: c.bg, overflow: 'hidden' }}>
-                      <img src={g.thumbnail} alt={g.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { e.target.style.display = 'none' }} />
-                    </div>
-                    <div style={{ padding: '5px 7px', borderTop: `2px solid ${c.border}` }}>
-                      <p style={{ fontWeight: 700, fontSize: '10px', color: '#222', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{g.title}</p>
-                    </div>
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
-
-          {/* CENTER — game */}
+          {/* CENTER — game (takes up the big column) */}
           <div>
             <div ref={containerRef} style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', border: '3px solid #a78bfa', boxShadow: '0 8px 32px rgba(124,58,237,0.2)', background: '#0d0d1a', width: '100%' }}>
               <canvas ref={canvasRef} width={W} height={H}
@@ -802,16 +781,8 @@ export default function IkopSurvival() {
 
           {/* RIGHT — ad slot */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <div style={{ background: 'white', border: '2px dashed #c4b5fd', borderRadius: '12px', padding: '12px', textAlign: 'center', minHeight: '250px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <p style={{ color: '#c4b5fd', fontSize: '11px', fontWeight: 700, margin: '0 0 6px', letterSpacing: '1px' }}>ADVERTISEMENT</p>
-              <p style={{ color: '#e0e8f0', fontSize: '11px', margin: 0 }}>160×250<br/>Ad Slot</p>
-              <p style={{ color: '#c4b5fd', fontSize: '10px', margin: '8px 0 0' }}>Place AdSense<br/>code here</p>
-            </div>
-            <div style={{ background: 'white', border: '2px dashed #c4b5fd', borderRadius: '12px', padding: '12px', textAlign: 'center', minHeight: '250px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <p style={{ color: '#c4b5fd', fontSize: '11px', fontWeight: 700, margin: '0 0 6px', letterSpacing: '1px' }}>ADVERTISEMENT</p>
-              <p style={{ color: '#e0e8f0', fontSize: '11px', margin: 0 }}>160×250<br/>Ad Slot</p>
-              <p style={{ color: '#c4b5fd', fontSize: '10px', margin: '8px 0 0' }}>Place AdSense<br/>code here</p>
-            </div>
+            <AdSlot />
+            <AdSlot />
           </div>
         </div>
 
@@ -858,28 +829,7 @@ export default function IkopSurvival() {
           </div>
         </div>
 
-        {/* related */}
-        <h2 style={{ fontFamily: 'Caveat, cursive', fontSize: '22px', fontWeight: 700, color: '#5b21b6', marginBottom: '14px' }}>More Games You'll Love</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px' }}>
-          {related.map(g => {
-            const c = catColors[g.category] || catColors.Action
-            return (
-              <Link key={g.slug} href={`/games/${g.slug}`} style={{ textDecoration: 'none' }}>
-                <div style={{ borderRadius: '12px', overflow: 'hidden', border: `2px solid ${c.border}`, background: 'white', transition: 'transform 0.15s', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
-                  onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
-                  onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>
-                  <div style={{ aspectRatio: '1', background: c.bg, overflow: 'hidden' }}>
-                    <img src={g.thumbnail} alt={g.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { e.target.style.display = 'none' }} />
-                  </div>
-                  <div style={{ padding: '8px 10px', borderTop: `3px solid ${c.border}` }}>
-                    <p style={{ fontWeight: 700, fontSize: '12px', color: '#222', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{g.title}</p>
-                    <p style={{ fontSize: '11px', color: c.text, margin: '2px 0 0', fontWeight: 700 }}>{g.category}</p>
-                  </div>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
+        
       </main>
 
       <footer style={{ position: 'relative', zIndex: 1, background: 'rgba(255,255,255,0.8)', borderTop: '2px solid #e0e8f0', padding: '20px 24px', textAlign: 'center', marginTop: '40px' }}>
