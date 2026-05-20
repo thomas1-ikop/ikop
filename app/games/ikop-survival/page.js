@@ -798,7 +798,7 @@ export default function IkopSurvival() {
                     onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
                     onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>
                     <div style={{ aspectRatio: '1', background: c.bg, overflow: 'hidden' }}>
-                      <img src={g.thumbnail} alt={g.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { e.target.style.display = 'none' }} />
+                      <img src={g.thumbnail} alt={g.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} onError={e => { e.target.style.display = 'none' }} />
                     </div>
                     <div style={{ padding: '4px 6px', borderTop: `2px solid ${c.border}` }}>
                       <p style={{ fontWeight: 700, fontSize: '11px', color: '#222', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{g.title}</p>

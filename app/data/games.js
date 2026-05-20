@@ -5,7 +5,7 @@ export const games = [
     category: 'Action',
     featured: true,
     hot: true,
-    thumbnail: 'https://placehold.co/512x512/0d0d1a/a78bfa?text=🔮+Ikop+Survival',
+    thumbnail: 'https://placehold.co/512x512/0d0d1a/a78bfa?text=🔮',
     url: '/games/ikop-survival',
     description: 'Survive endless waves of enemies! Move with WASD, auto-shoot enemies, collect gems to level up and choose powerful upgrades. An Ikop original!'
   },
@@ -208,5 +208,135 @@ export const games = [
     thumbnail: 'https://img.gamedistribution.com/e28bcc262b6245dc806dba3a43d057ce-512x512.jpeg',
     url: 'https://html5.gamedistribution.com/e28bcc262b6245dc806dba3a43d057ce/?gd_sdk_referrer_url=https://ikop.vercel.app/games/stickman-zombie-hero',
     description: 'Play as stickman hero or zombie boss. Kill zombies or infect stickmen to win!'
+  },
+  {
+    slug: 'block-escape',
+    title: 'Block Escape',
+    category: 'Puzzle',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/9ffaf2fb134844958788642d2f76c6cd-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/9ffaf2fb134844958788642d2f76c6cd/?gd_sdk_referrer_url=https://ikop.vercel.app/games/block-escape',
+    description: 'Clear blocks by moving them off the screen in the direction shown by arrows. Brain-teasing fun!'
+  },
+  {
+    slug: 'sniper-master',
+    title: 'Sniper Master',
+    category: 'Shooting',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/8bd8d8dc794c4bf0b3e04e3f8ca4203f-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/8bd8d8dc794c4bf0b3e04e3f8ca4203f/?gd_sdk_referrer_url=https://ikop.vercel.app/games/sniper-master',
+    description: 'Jump, float and fire while airborne. Time your shots perfectly to eliminate targets!'
+  },
+  {
+    slug: 'jungle-match',
+    title: 'Jungle Match Adventures',
+    category: 'Puzzle',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/c6d324c4729f48ef9a3cd8882bdf078e-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/c6d324c4729f48ef9a3cd8882bdf078e/?gd_sdk_referrer_url=https://ikop.vercel.app/games/jungle-match',
+    description: 'Match 3 jungle items in this Amazon adventure. Hundreds of exciting levels!'
+  },
+  {
+    slug: 'tiles-unexpected',
+    title: 'Tiles of the Unexpected',
+    category: 'Puzzle',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/3b56718d228d4317af566eb1d73b1f75-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/3b56718d228d4317af566eb1d73b1f75/?gd_sdk_referrer_url=https://ikop.vercel.app/games/tiles-unexpected',
+    description: 'Remove groups of identical tiles to clear the board. Combos create bombs!'
+  },
+  {
+    slug: 'ninja-survivor',
+    title: 'Ninja Survivor',
+    category: 'Action',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/6ff158a48fed4f3aa40877422662a71a-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/6ff158a48fed4f3aa40877422662a71a/?gd_sdk_referrer_url=https://ikop.vercel.app/games/ninja-survivor',
+    description: 'Become a nimble ninja through dangerous 3D levels. Fight zombies and bosses!'
+  },
+  {
+    slug: 'wordle',
+    title: 'Wordle',
+    category: 'Word',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/ab317906f2f64cebba2373d702d36b63-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/ab317906f2f64cebba2373d702d36b63/?gd_sdk_referrer_url=https://ikop.vercel.app/games/wordle',
+    description: 'Guess the 5-letter word in 6 tries. Green means right letter right place!'
+  },
+  {
+    slug: 'hangman',
+    title: 'Hangman Plus',
+    category: 'Word',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/f72b24ef2f714fa993414832a71fdc5e-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/f72b24ef2f714fa993414832a71fdc5e/?gd_sdk_referrer_url=https://ikop.vercel.app/games/hangman',
+    description: 'Classic Hangman with smooth jazz, campaign mode and thousands of words!'
+  },
+  {
+    slug: 'metro-escape',
+    title: 'Metro Escape',
+    category: 'Adventure',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/1e58c5988fb44962a4cd120615d1ca6a-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/1e58c5988fb44962a4cd120615d1ca6a/?gd_sdk_referrer_url=https://ikop.vercel.app/games/metro-escape',
+    description: 'Search the metro for hidden items and solve puzzles to escape. Good luck!'
+  },
+  {
+    slug: 'escape-portal',
+    title: 'Escape from the Portal',
+    category: 'Adventure',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/c323e23d0c7949c0b8ed4e1b55495f25-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/c323e23d0c7949c0b8ed4e1b55495f25/?gd_sdk_referrer_url=https://ikop.vercel.app/games/escape-portal',
+    description: 'Explore gloomy catacombs, avoid traps, fight monsters and open the ancient portal!'
+  },
+  {
+    slug: 'jewel-link',
+    title: 'Jewel Link',
+    category: 'Puzzle',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/21987ef4d4284d32b1bd2aef62f47782-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/21987ef4d4284d32b1bd2aef62f47782/?gd_sdk_referrer_url=https://ikop.vercel.app/games/jewel-link',
+    description: 'Connect matching jewels to clear the board. The path cant have more than 3 turns!'
+  },
+  {
+    slug: 'traffic-racing',
+    title: 'Traffic Racing',
+    category: 'Racing',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/f3ee6674b4ea4579aeefd54d7bf388f0-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/f3ee6674b4ea4579aeefd54d7bf388f0/?gd_sdk_referrer_url=https://ikop.vercel.app/games/traffic-racing',
+    description: 'Weave through heavy traffic at high speeds. Career mode and online racing!'
+  },
+  {
+    slug: 'i8-city-driver',
+    title: 'i8 City Driver',
+    category: 'Racing',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/f6acd919192c441c9aca2d20a18e04c6-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/f6acd919192c441c9aca2d20a18e04c6/?gd_sdk_referrer_url=https://ikop.vercel.app/games/i8-city-driver',
+    description: 'Drive a supercar through an expansive city. Customize, drift and use nitro!'
+  },
+  {
+    slug: 'dont-panic-dude',
+    title: "Don't Panic Dude!",
+    category: 'Action',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/5a89e945969e4b2fbb3ecb661d4c64ba-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/5a89e945969e4b2fbb3ecb661d4c64ba/?gd_sdk_referrer_url=https://ikop.vercel.app/games/dont-panic-dude',
+    description: 'Jump, avoid deadly spikes and survive! Unlock 40 heroes and beat the AI!'
   },
 ]

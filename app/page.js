@@ -3,24 +3,30 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { games } from './data/games'
 
-const categories = ['All', 'Action', 'Puzzle', 'Multiplayer', 'Racing', 'Sports', 'Zombie']
+const categories = ['All', 'Action', 'Puzzle', 'Multiplayer', 'Racing', 'Sports', 'Zombie', 'Shooting', 'Word', 'Adventure']
 const catColors = {
-  All:         { bg: '#ede9fe', border: '#a78bfa', text: '#5b21b6' },
-  Action:      { bg: '#fee2e2', border: '#f87171', text: '#991b1b' },
-  Puzzle:      { bg: '#fef3c7', border: '#fbbf24', text: '#92400e' },
-  Multiplayer: { bg: '#d1fae5', border: '#34d399', text: '#065f46' },
-  Racing:      { bg: '#dbeafe', border: '#60a5fa', text: '#1e3a8a' },
-  Sports:      { bg: '#fce7f3', border: '#f472b6', text: '#831843' },
-  Zombie:      { bg: '#f0fdf4', border: '#86efac', text: '#166534' },
-  Shooting:    { bg: '#fef3c7', border: '#fbbf24', text: '#92400e' },
+  All:         { bg: '#FFFFFF', border: '#0000FF', text: '#5b21b6' },
+  Action:      { bg: '#FFFFFF', border: '#0000ff', text: '#991b1b' },
+  Puzzle:      { bg: '#FFFFFF', border: '#0000ff', text: '#92400e' },
+  Multiplayer: { bg: '#FFFFFF', border: '#0000ff', text: '#065f46' },
+  Racing:      { bg: '#FFFFFF', border: '#0000ff', text: '#1e3a8a' },
+  Sports:      { bg: '#FFFFFF', border: '#0000ff', text: '#831843' },
+  Zombie:      { bg: '#FFFFFF', border: '#0000ff', text: '#166534' },
+  Shooting:    { bg: '#FFFFFF', border: '#0000ff', text: '#a8071a' },
+  Word:        { bg: '#FFFFFF', border: '#0000ff', text: '#1d39c4' },
+  Adventure:   { bg: '#FFFFFF', border: '#0000ff', text: '#ad4e00' },
 }
 
 const catBoxes = [
-  { slug: 'soccer',      label: 'Soccer',     icon: '⚽', color: catColors.Sports },
+  { slug: 'sports',      label: 'Sports',     icon: '⚽', color: catColors.Sports },
   { slug: 'shooting',    label: 'Shooting',   icon: '🔫', color: catColors.Shooting },
   { slug: 'multiplayer', label: 'Multiplayer',icon: '👥', color: catColors.Multiplayer },
   { slug: 'zombie',      label: 'Zombie',     icon: '🧟', color: catColors.Zombie },
   { slug: 'puzzle',      label: 'Puzzle',     icon: '🧩', color: catColors.Puzzle },
+  { slug: 'word',        label: 'Word',       icon: '📝', color: catColors.Word },
+  { slug: 'adventure',   label: 'Adventure',  icon: '🗺️', color: catColors.Adventure },
+  { slug: 'racing',      label: 'Racing',     icon: '🏎️', color: catColors.Racing },
+  { slug: 'action',      label: 'Action',     icon: '⚡', color: catColors.Action },
 ]
 
 export default function Home() {
@@ -118,7 +124,7 @@ export default function Home() {
                       onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.04)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.13)' }}
                       onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.07)' }}>
                       <div style={{ width: '100%', aspectRatio: '16/9', background: c.bg, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src={game.thumbnail} alt={game.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { e.target.style.display = 'none' }} />
+                        <img src={game.thumbnail} alt={game.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} onError={e => { e.target.style.display = 'none' }} />
                       </div>
                       <div style={{ padding: '10px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                         <div>
@@ -151,7 +157,7 @@ export default function Home() {
                   onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.12)' }}
                   onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)' }}>
                   <div style={{ width: '100%', aspectRatio: '1', background: c.bg, overflow: 'hidden' }}>
-                    <img src={game.thumbnail} alt={game.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { e.target.style.display = 'none' }} />
+                    <img src={game.thumbnail} alt={game.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} onError={e => { e.target.style.display = 'none' }} />
                   </div>
                   <div style={{ padding: '8px 10px', borderTop: `3px solid ${c.border}` }}>
                     <p style={{ fontWeight: 700, fontSize: '13px', color: '#222', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{game.title}</p>
@@ -167,7 +173,7 @@ export default function Home() {
         {activeCategory === 'All' && search === '' && (
           <>
             <h2 style={{ fontFamily: 'Caveat, cursive', fontSize: '22px', fontWeight: 700, color: '#5b21b6', marginBottom: '14px' }}>🎮 Browse by Category</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '12px' }}>
               {catBoxes.map(box => (
                 <button key={box.slug} onClick={() => setActiveCategory(box.label)}
                   style={{ borderRadius: '14px', border: `2.5px solid ${box.color.border}`, background: box.color.bg, padding: '18px 8px', textAlign: 'center', cursor: 'pointer', transition: 'transform 0.15s' }}

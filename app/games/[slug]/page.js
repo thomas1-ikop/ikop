@@ -38,18 +38,16 @@ export default function GamePage() {
       <div style={{ position: 'fixed', inset: 0, backgroundImage: 'linear-gradient(#e8eef7 1px, transparent 1px), linear-gradient(90deg, #e8eef7 1px, transparent 1px)', backgroundSize: '28px 28px', opacity: 0.7, pointerEvents: 'none', zIndex: 0 }} />
       <div style={{ position: 'fixed', left: '52px', top: 0, bottom: 0, width: '2px', background: 'rgba(255,100,100,0.18)', pointerEvents: 'none', zIndex: 0 }} />
 
-      <header style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(8px)', borderBottom: '2px solid #e0e8f0', padding: '10px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', border: '2.5px solid #c4b5fd', borderRadius: '14px', padding: '6px 16px 6px 12px', background: 'rgba(255,255,255,0.95)' }}>
-          <span style={{ fontSize: '24px' }}>🎮</span>
-          <span style={{ fontFamily: 'Caveat, cursive', fontSize: '30px', fontWeight: 700, background: 'linear-gradient(120deg,#7c3aed,#ec4899,#f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>ikop</span>
+      <header style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(8px)', borderBottom: '1px solid #e0e8f0', padding: '6px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', border: '2.5px solid #c4b5fd', borderRadius: '14px', padding: '4px 14px 4px 10px', background: 'rgba(255,255,255,0.95)' }}>
+          <span style={{ fontSize: '18px' }}>🎮</span>
+          <span style={{ fontFamily: 'Caveat, cursive', fontSize: '22px', fontWeight: 700, background: 'linear-gradient(120deg,#7c3aed,#ec4899,#f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', paddingRight: '4px' }}>ikop</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#f0f4ff', borderRadius: '99px', padding: '5px 14px', border: '1.5px solid #c4b5fd' }}>
           <span>🔍</span>
           <input type="text" placeholder="Search games..." onChange={e => { if (e.target.value) window.location.href = `/?search=${e.target.value}` }} style={{ border: 'none', background: 'transparent', outline: 'none', fontSize: '13px', color: '#444', width: '150px', fontFamily: 'Patrick Hand, sans-serif' }} />
         </div>
         <Link href="/" style={{ color: '#7c3aed', fontWeight: 700, textDecoration: 'none', fontSize: '13px' }}>← Back</Link>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6738714121307819"
-     crossorigin="anonymous"></script>
       </header>
 
       <main style={{ position: 'relative', zIndex: 1, maxWidth: '1300px', margin: '0 auto', padding: '10px 24px 24px' }}>
@@ -119,7 +117,7 @@ export default function GamePage() {
                   onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
                   onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>
                   <div style={{ aspectRatio: '1', background: rc.bg, overflow: 'hidden' }}>
-                    <img src={g.thumbnail} alt={g.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { e.target.style.display = 'none' }} />
+                    <img src={g.thumbnail} alt={g.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} onError={e => { e.target.style.display = 'none' }} />
                   </div>
                   <div style={{ padding: '4px 6px', borderTop: `2px solid ${rc.border}` }}>
                     <p style={{ fontWeight: 700, fontSize: '10px', color: '#222', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{g.title}</p>
