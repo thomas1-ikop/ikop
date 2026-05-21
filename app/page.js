@@ -218,7 +218,7 @@ export default function Home() {
 
       {/* HEADER */}
       <header style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #e5e7eb', padding: '10px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', border: '2px solid #e0d7ff', borderRadius: '14px', padding: '6px 16px 6px 12px', background: 'white', flexShrink: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', border: '2px solid #e0d7ff', borderRadius: '14px', padding: '6px 20px 6px 12px', background: 'white', flexShrink: 0 }}>
           <span style={{ fontSize: '20px' }}>🎮</span>
           <span style={{ fontFamily: 'Caveat, cursive', fontSize: '26px', fontWeight: 700, background: 'linear-gradient(120deg,#7c3aed,#ec4899,#f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>ikop</span>
         </div>

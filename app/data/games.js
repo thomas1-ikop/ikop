@@ -339,4 +339,84 @@ export const games = [
     url: 'https://html5.gamedistribution.com/5a89e945969e4b2fbb3ecb661d4c64ba/?gd_sdk_referrer_url=https://ikop.vercel.app/games/dont-panic-dude',
     description: 'Jump, avoid deadly spikes and survive! Unlock 40 heroes and beat the AI!'
   },
+  {
+    slug: 'portal-hop',
+    title: 'Portal Hop',
+    category: 'Puzzle',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/d83a6203efec418084fc93da189e0abb-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/d83a6203efec418084fc93da189e0abb/?gd_sdk_referrer_url=https://ikop.vercel.app/games/portal-hop',
+    description: 'Carry a portal above your head and warp your way through tricky platform puzzles!'
+  },
+  {
+    slug: 'tank-challenge',
+    title: 'Tank Challenge',
+    category: 'Action',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/d26337f400ff49869928d9994646457b-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/d26337f400ff49869928d9994646457b/?gd_sdk_referrer_url=https://ikop.vercel.app/games/tank-challenge',
+    description: 'Battle in tank arenas solo or with a friend. Use lasers, rockets and bombs to win!'
+  },
+  {
+    slug: 'slingshot-fortress',
+    title: 'Slingshot Fortress',
+    category: 'Action',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/ecc90172a5a8427b85f6b1b75e5306e7-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/ecc90172a5a8427b85f6b1b75e5306e7/?gd_sdk_referrer_url=https://ikop.vercel.app/games/slingshot-fortress',
+    description: 'Launch stones, bombs and shurikens to destroy towers and collapse structures!'
+  },
+  {
+    slug: 'space-cleaner',
+    title: 'Space Cleaner',
+    category: 'Adventure',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/69507828a2d441b781740ecff532057a-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/69507828a2d441b781740ecff532057a/?gd_sdk_referrer_url=https://ikop.vercel.app/games/space-cleaner',
+    description: 'Clear asteroid fields around your spacecraft. Upgrade your ship and survive!'
+  },
+  {
+    slug: 'astral-escape',
+    title: 'Astral Escape',
+    category: 'Adventure',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/731cd1514aad4ad196d1c1ccde21b403-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/731cd1514aad4ad196d1c1ccde21b403/?gd_sdk_referrer_url=https://ikop.vercel.app/games/astral-escape',
+    description: 'Dodge asteroids, outsmart aliens and survive cosmic traps in this space escape!'
+  },
+  {
+    slug: 'grand-mahjong',
+    title: 'Grand Mahjong Connect',
+    category: 'Puzzle',
+    featured: false,
+    hot: false,
+    thumbnail: 'https://img.gamedistribution.com/92211d47448849d189bbc32d0d4d8f6f-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/92211d47448849d189bbc32d0d4d8f6f/?gd_sdk_referrer_url=https://ikop.vercel.app/games/grand-mahjong',
+    description: 'Match three identical mahjong tiles to clear the board. Relaxing but challenging!'
+  },
+  {
+    slug: 'dead-paradise',
+    title: 'Dead Paradise',
+    category: 'Racing',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/5612231ac5184ecda617c334cbb46878-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/5612231ac5184ecda617c334cbb46878/?gd_sdk_referrer_url=https://ikop.vercel.app/games/dead-paradise',
+    description: 'Drive, shoot enemies and survive to the finish in this apocalyptic car battle game!'
+  },
+  {
+    slug: '67-clicker',
+    title: '67 Clicker Tap',
+    category: 'Action',
+    featured: false,
+    hot: true,
+    thumbnail: 'https://img.gamedistribution.com/7fcb55f25f4a4a07848c630dffe1ae6e-512x512.jpeg',
+    url: 'https://html5.gamedistribution.com/7fcb55f25f4a4a07848c630dffe1ae6e/?gd_sdk_referrer_url=https://ikop.vercel.app/games/67-clicker',
+    description: 'Tap to earn 67 Points, unlock upgrades and collect all 14 unique 67 characters!'
+  },
 ]
