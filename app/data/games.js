@@ -1,4 +1,14 @@
 export const games = [
+    {
+    slug: 'ikop-rush',
+    title: 'Ikop Rush',
+    category: 'Action',
+    featured: true,
+    hot: true,
+    thumbnail: 'https://placehold.co/512x512/0f0c29/a78bfa?text=🏃+Rush',
+    url: '/games/ikop-rush',
+    description: 'Switch lanes to dodge obstacles and survive! Collect coins, grab powerups and run as far as you can. An Ikop original!'
+  },
   {
     slug: 'ikop-survival',
     title: 'Ikop Survival',
