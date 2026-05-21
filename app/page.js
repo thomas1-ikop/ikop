@@ -24,18 +24,18 @@ const cardBorderColors = [
 ]
 
 const sections = [
-  { id: 'featured',    label: '🔥 Featured',         filter: g => g.featured },
-  { id: 'hot',         label: '⚡ Trending Now',      filter: g => g.hot },
-  { id: 'action',      label: '💥 Action Games',      filter: g => g.category === 'Action' },
-  { id: 'sports',      label: '⚽ Sports Games',      filter: g => g.category === 'Sports' },
-  { id: 'puzzle',      label: '🧩 Puzzle & Brain',    filter: g => g.category === 'Puzzle' },
-  { id: 'multiplayer', label: '👥 Multiplayer',        filter: g => g.category === 'Multiplayer' },
-  { id: 'racing',      label: '🏎️ Racing Games',      filter: g => g.category === 'Racing' },
-  { id: 'shooting',    label: '🔫 Shooting Games',    filter: g => g.category === 'Shooting' },
-  { id: 'word',        label: '📝 Word Games',        filter: g => g.category === 'Word' },
-  { id: 'adventure',   label: '🗺️ Adventure',         filter: g => g.category === 'Adventure' },
-  { id: 'zombie',      label: '🧟 Zombie Games',      filter: g => g.category === 'Zombie' },
-  { id: 'originals',   label: '⭐ Ikop Originals',    filter: g => g.slug === 'ikop-survival' },
+  { id: 'featured',    label: '🔥 Featured',         fn: g => g.featured },
+  { id: 'hot',         label: '⚡ Trending Now',      fn: g => g.hot },
+  { id: 'action',      label: '💥 Action Games',      fn: g => g.category === 'Action' },
+  { id: 'sports',      label: '⚽ Sports Games',      fn: g => g.category === 'Sports' },
+  { id: 'puzzle',      label: '🧩 Puzzle & Brain',    fn: g => g.category === 'Puzzle' },
+  { id: 'multiplayer', label: '👥 Multiplayer',        fn: g => g.category === 'Multiplayer' },
+  { id: 'racing',      label: '🏎️ Racing Games',      fn: g => g.category === 'Racing' },
+  { id: 'shooting',    label: '🔫 Shooting Games',    fn: g => g.category === 'Shooting' },
+  { id: 'word',        label: '📝 Word Games',        fn: g => g.category === 'Word' },
+  { id: 'adventure',   label: '🗺️ Adventure',         fn: g => g.category === 'Adventure' },
+  { id: 'zombie',      label: '🧟 Zombie Games',      fn: g => g.category === 'Zombie' },
+  { id: 'originals',   label: '⭐ Ikop Originals',    fn: g => g.slug === 'ikop-survival' },
 ]
 
 function GameCard({ game, index, favorites, toggleFav, big = false }) {
@@ -139,10 +139,11 @@ function GameCard({ game, index, favorites, toggleFav, big = false }) {
 }
 
 function GameSection({ section, favorites, toggleFav, search, activeCategory }) {
-  const sectionGames = section.filter(games).filter(g => {
+  const sectionGames = games.filter(g => {
+    const matchSection = section.fn(g)
     const matchSearch = g.title.toLowerCase().includes(search.toLowerCase())
     const matchCat = activeCategory === 'All' || g.category === activeCategory
-    return matchSearch && matchCat
+    return matchSection && matchSearch && matchCat
   })
   if (sectionGames.length === 0) return null
   const isFeatured = section.id === 'featured'
@@ -153,7 +154,6 @@ function GameSection({ section, favorites, toggleFav, search, activeCategory }) 
         fontFamily: 'Caveat, cursive',
         fontSize: '22px', fontWeight: 700,
         color: '#1f2937', marginBottom: '14px',
-        display: 'flex', alignItems: 'center', gap: '8px',
       }}>{section.label}</h2>
       {isFeatured ? (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
@@ -201,13 +201,13 @@ export default function Home() {
   const favGames = games.filter(g => favorites.includes(g.slug))
 
   const visibleSections = search !== '' || activeCategory !== 'All'
-    ? [{ id: 'search', label: `🔍 Results`, filter: g => {
+    ? [{ id: 'search', label: `🔍 Results`, fn: g => {
         const matchSearch = g.title.toLowerCase().includes(search.toLowerCase())
         const matchCat = activeCategory === 'All' || g.category === activeCategory
         return matchSearch && matchCat
       }}]
     : sections.filter(s => {
-        const filtered = s.filter(games)
+        const filtered = games.filter(g => s.fn(g))
         return filtered.length > 0
       })
 
