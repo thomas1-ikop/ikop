@@ -12,6 +12,8 @@ const catColors = {
   Sports:      { bg: '#fce7f3', border: '#f472b6', text: '#831843' },
   Zombie:      { bg: '#f0fdf4', border: '#86efac', text: '#166534' },
   Shooting:    { bg: '#fef3c7', border: '#fbbf24', text: '#92400e' },
+  Word:      { bg: '#f0f5ff', border: '#597ef7', text: '#1d39c4' },
+Adventure: { bg: '#fff7e6', border: '#ffa940', text: '#ad4e00' },
 }
 
 export default function GamePage() {
@@ -39,7 +41,7 @@ export default function GamePage() {
       <div style={{ position: 'fixed', left: '52px', top: 0, bottom: 0, width: '2px', background: 'rgba(255,100,100,0.18)', pointerEvents: 'none', zIndex: 0 }} />
 
       <header style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(8px)', borderBottom: '1px solid #e0e8f0', padding: '6px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', border: '2.5px solid #c4b5fd', borderRadius: '14px', padding: '4px 14px 4px 10px', background: 'rgba(255,255,255,0.95)' }}>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', border: '2.5px solid #c4b5fd', borderRadius: '14px', padding: '4px 24px 4px 12px', background: 'rgba(255,255,255,0.95)' }}>
           <span style={{ fontSize: '18px' }}>🎮</span>
           <span style={{ fontFamily: 'Caveat, cursive', fontSize: '22px', fontWeight: 700, background: 'linear-gradient(120deg,#7c3aed,#ec4899,#f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', paddingRight: '4px' }}>ikop</span>
         </Link>

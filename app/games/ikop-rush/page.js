@@ -8,7 +8,7 @@ const LANES = 3
 const LANE_X = [200, 400, 600]
 const PLAYER_Y = 480
 const GAME_W = 800
-const GAME_H = 600
+const GAME_H = 380
 
 const catColors = {
   Action: { bg: '#fee2e2', border: '#f87171', text: '#991b1b' },

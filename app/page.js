@@ -72,7 +72,7 @@ function GameCard({ game, index, favorites, toggleFav, big = false }) {
             <img
               src={game.thumbnail}
               alt={game.title}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '4px' }}
               onError={e => {
                 e.target.style.display = 'none'
                 e.target.nextSibling.style.display = 'flex'
@@ -83,10 +83,11 @@ function GameCard({ game, index, favorites, toggleFav, big = false }) {
               position: 'absolute', inset: 0,
               alignItems: 'center', justifyContent: 'center',
               flexDirection: 'column', gap: '8px',
-              background: `linear-gradient(135deg, ${borderColor}33, ${borderColor}11)`,
+              background: `linear-gradient(135deg, ${borderColor}44, ${borderColor}22)`,
             }}>
-              <span style={{ fontSize: big ? '48px' : '32px' }}>🎮</span>
-              <span style={{ fontSize: '11px', color: '#666', fontWeight: 600 }}>{game.title}</span>
+              <span style={{ fontSize: big ? '52px' : '36px' }}>🎮</span>
+              <span style={{ fontSize: big ? '13px' : '10px', color: '#444', fontWeight: 700, textAlign: 'center', padding: '0 8px' }}>{game.title}</span>
+              <span style={{ fontSize: big ? '11px' : '9px', color: '#888' }}>{game.category}</span>
             </div>
             {game.hot && (
               <div style={{
@@ -218,7 +219,7 @@ export default function Home() {
 
       {/* HEADER */}
       <header style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #e5e7eb', padding: '10px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', border: '2px solid #e0d7ff', borderRadius: '14px', padding: '6px 28px 6px 14px', background: 'white', flexShrink: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', border: '2px solid #e0d7ff', borderRadius: '14px', padding: '6px 32px 6px 14px', background: 'white', flexShrink: 0 }}>
           <span style={{ fontSize: '20px' }}>🎮</span>
           <span style={{ fontFamily: 'Caveat, cursive', fontSize: '26px', fontWeight: 700, background: 'linear-gradient(120deg,#7c3aed,#ec4899,#f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>ikop</span>
         </div>

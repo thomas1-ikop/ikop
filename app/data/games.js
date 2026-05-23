@@ -10,6 +10,16 @@ export const games = [
     description: 'Switch lanes to dodge obstacles and survive! Collect coins, grab powerups and run as far as you can. An Ikop original!'
   },
   {
+    slug: 'idle-breakout',
+    title: 'Idle Breakout',
+    category: 'Puzzle',
+    featured: true,
+    hot: true,
+    thumbnail: 'https://placehold.co/512x512/1a1a2e/a78bfa?text=🧱+Idle+Breakout',
+    url: '/games/idle-breakout',
+    description: 'Click bricks to earn money, buy balls that bounce automatically, and upgrade them. How many levels can you clear?'
+  },
+  {
     slug: 'ikop-survival',
     title: 'Ikop Survival',
     category: 'Action',

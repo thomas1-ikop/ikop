@@ -19,7 +19,7 @@ export default function IkopSurvival() {
   const [adTimer, setAdTimer] = useState(5)
   const adIntervalRef = useRef(null)
 
-  const W = 900, H = 500
+  const W = 800, H = 450
 
   const getHS = () => { try { return parseInt(localStorage.getItem('ikop-surv-hs') || '0') } catch { return 0 } }
   const saveHS = (s) => { try { localStorage.setItem('ikop-surv-hs', String(s)) } catch {} }
@@ -622,7 +622,7 @@ export default function IkopSurvival() {
       <div style={{ position: 'fixed', inset: 0, backgroundImage: 'linear-gradient(#e8eef7 1px, transparent 1px), linear-gradient(90deg, #e8eef7 1px, transparent 1px)', backgroundSize: '28px 28px', opacity: 0.7, pointerEvents: 'none', zIndex: 0 }} />
 
       <header style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(8px)', borderBottom: '1px solid #e0e8f0', padding: '6px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', border: '2.5px solid #c4b5fd', borderRadius: '14px', padding: '4px 14px 4px 10px', background: 'rgba(255,255,255,0.95)' }}>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', border: '2.5px solid #c4b5fd', borderRadius: '14px', padding: '4px 24px 4px 12px', background: 'rgba(255,255,255,0.95)' }}>
           <span style={{ fontSize: '18px' }}>🎮</span>
           <span style={{ fontFamily: 'Caveat, cursive', fontSize: '22px', fontWeight: 700, background: 'linear-gradient(120deg,#7c3aed,#ec4899,#f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', paddingRight: '4px' }}>ikop</span>
         </Link>
