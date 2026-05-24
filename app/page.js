@@ -72,7 +72,7 @@ function GameCard({ game, index, favorites, toggleFav, big = false }) {
             <img
               src={game.thumbnail}
               alt={game.title}
-              style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '4px' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               onError={e => {
                 e.target.style.display = 'none'
                 e.target.nextSibling.style.display = 'flex'

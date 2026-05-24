@@ -680,8 +680,7 @@ export default function IkopRush() {
 
           {/* ADS */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <AdSlot />
-            <AdSlot style={{ minHeight: '200px' }} />
+            <AdSlot style={{ minHeight: '250px' }} />
           </div>
         </div>
 

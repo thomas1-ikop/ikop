@@ -781,8 +781,7 @@ export default function IkopSurvival() {
 
           {/* RIGHT — ad slot */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <AdSlot />
-            <AdSlot />
+            <AdSlot style={{ minHeight: '250px' }} />
           </div>
         </div>
 
